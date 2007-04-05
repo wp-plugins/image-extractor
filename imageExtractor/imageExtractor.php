@@ -3,7 +3,7 @@
 Plugin Name: Image Extractor
 Plugin URI: http://www.dynamick.it/image-extractor-765.html
 Description: This WordPress mod extract the image from the post.
-Version: 1
+Version: 1.1
 Author: Michele Gobbi
 Author URI: http://www.dynamick.it
 
@@ -34,6 +34,9 @@ Author URI: http://www.dynamick.it
 
 ~Changelog:
 
+06_04_2007
+Updated some bugs in the interface methods
+
 */
 
 // Configure this variable and set the cache folder for the resized images
@@ -57,11 +60,11 @@ function wp_image_extractor($args='') {
 	if(!isset($prefix)) $prefix = '';
 	if(!isset($suffix)) $suffix = '';
 
-	return image_extractor();
+	return image_extractor($resize, $resize_type, $width, $height, $class, $id, $prefix, $suffix);
 }
 
 function image_extractor($resize=false, $resize_type=1, $width='', $height='', $class='', $id='', $prefix='', $suffix='') {
-	echo get_the_excerpt_reloaded($resize, $resize_type, $width, $height, $class, $id, $prefix, $suffix);
+	echo get_image_extractor($resize, $resize_type, $width, $height, $class, $id, $prefix, $suffix);
 }
 
 function get_image_extractor($resize, $resize_type, $width, $height, $class, $id, $prefix, $suffix) {
