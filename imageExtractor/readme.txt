@@ -1,11 +1,11 @@
 === IMAGE EXTRACTOR ===
 
-Tags: image, resize, 
-Contributors: Michele gobbi
+Tags: image, resize, tag, post, cache, html
+Contributors: Michele Gobbi
 Author Website: http://www.dynamick.it
 Plugin web page: http://www.dynamick.it/image-extractor-765.html 
 Requires at least: 1.5
-Tested up to: 1.5
+Tested up to: 1.5, 2.1.2
 Stable tag: trunk
 
 Image Extractor is a WordPress plugin that extract the first image from the post and display it. 
@@ -21,9 +21,9 @@ The image source is retrieved from the first image found in the current post.
 
 == Installation ==
 
-1) Download the .zip file and extract it 
-2) Upload the extrated folder (imageExtractor/) to the WordPress plugins folder (wp-content/plugins/) 
-3) Configure the imageExtractor.php file and set the right cache folder. Make sure it’s writable. 
+1) Download the .zip file and extract it
+2) Upload the extrated folder (imageExtractor/) to the WordPress plugins folder (wp-content/plugins/)
+3) Configure the imageExtractor.php file and set the right cache folder. Make sure it’s writable.
 4) Activate the plugin from the WordPress back office panel
 
 == Syntax ==
@@ -34,18 +34,17 @@ The syntax is:
 
 where:
 
-1) resize: indicate if the plugin has to resize the image and store it in the cache folder 
-2) resize_type: there are 3 type of resizing: 
-
+1) resize: indicate if the plugin has to resize the image and store it in the cache folder
+2) resize_type: there are 3 type of resizing:
    a) 0 -> image will be resized to the new output size, regardless of the original aspectratio. (default) 
-   b) 1 -> image will be cropped if necessary to preserve the aspectratio and avoid image distortions. 
+   b) 1 -> image will be cropped if necessary to preserve the aspectratio and avoid image distortions.
    c)2 -> image will be resized preserving its original aspectratio. differences to the new outputsize will be filled with white 
 
-3) width: the destination width. If resize is false, this property only add/change the WIDTH attribute of the IMG tag 
-4) height: the destination height. If resize is false, this property only add/change the HEIGHT attribute of the IMG tag 
-5) class: add or change the CLASS attribute of the IMG tag 
-6) id: add or change the ID attribute of the IMG tag 
-7) prefix: add a prefix to the resulting IMG tag 
+3) width: the destination width. If resize is false, this property only add/change the WIDTH attribute of the IMG tag
+4) height: the destination height. If resize is false, this property only add/change the HEIGHT attribute of the IMG tag
+5) class: add or change the CLASS attribute of the IMG tag
+6) id: add or change the ID attribute of the IMG tag
+7) prefix: add a prefix to the resulting IMG tag
 8) suffix: append a suffix to the resulting IMG tag 
  
 
