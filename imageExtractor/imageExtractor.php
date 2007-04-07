@@ -34,6 +34,10 @@ Author URI: http://www.dynamick.it
 
 ~Changelog:
 
+07_04_2007
+class.ImageToolbox.php has lost his tail. I've added a php closing tag "?>"...
+Thanks to Sergio
+
 06_04_2007
 Updated some bugs in the interface methods
 
