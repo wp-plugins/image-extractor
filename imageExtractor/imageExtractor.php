@@ -96,6 +96,7 @@ function get_image_extractor($resize, $resize_type, $width, $height, $class, $id
   $parser->Parse();
   $result=$parser->GetElements($htmlCode);
   $attribArr=$parser->getTagResource("img");    
+  if ($attribArr==false) return;
 
   if ($resize===true) {
     $src=$parser->linkAnalyzer($attribArr[0]["src"]);
