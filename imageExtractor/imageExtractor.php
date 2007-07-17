@@ -119,7 +119,7 @@ function get_image_extractor($resize, $resize_type, $width, $height, $class, $id
     $attribArr[0]["src"]=$dest;
   }
   
-  
+  $ret="";
   
   if (is_array($attribArr[0]))
   foreach ($attribArr[0] as $k=>$v) {
